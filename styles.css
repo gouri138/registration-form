@@ -1,4 +1,10 @@
 /* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Fixes input overflow issues */
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #1e1e1e; /* Dark background */
@@ -14,73 +20,75 @@ body {
     background-attachment: fixed; /* Keep the background image fixed */
 }
 
-
 .form-container {
     background-color: #2c2c2c; /* Dark grey background for form */
-    padding: 40px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    padding: 30px 20px; /* Adjust padding for compactness */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7); /* Enhance shadow for depth */
     width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
+    max-width: 360px; /* Restrict width */
+    border-radius: 10px;
     border: 1px solid #6a0dad; /* Purple border */
 }
 
 h2 {
     text-align: center;
     color: #c8a2c8; /* Light purple text */
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 28px;
+    margin-bottom: 15px;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
 }
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduce spacing between fields */
 }
 
 label {
     display: block;
-    font-size: 14px;
-    color: #d1d1d1; /* Light grey text for labels */
+    font-size: 13px; /* Compact label */
+    color: #d1d1d1; /* Light grey */
     margin-bottom: 5px;
 }
 
 input {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
+    width: 100%; /* Ensure input stays within the container */
+    padding: 10px; /* Adjust padding for compactness */
+    font-size: 14px;
     color: #fff;
-    background-color: #333; /* Dark input background */
+    background-color: #333; /* Input background */
     border: 2px solid #6a0dad; /* Purple border */
-    border-radius: 4px;
+    border-radius: 6px;
     outline: none;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 input:focus {
-    border-color: #8a2be2; /* Lighter purple when focused */
-    background-color: #2a2a2a; /* Slightly darker background on focus */
+    border-color: #8a2be2; /* Lighter purple on focus */
+    background-color: #2a2a2a; /* Slightly darker on focus */
+    box-shadow: 0 0 8px rgba(138, 43, 226, 0.7); /* Glow effect */
 }
 
 button {
     background-color: #6a0dad; /* Purple background */
     color: #fff;
     width: 100%;
-    padding: 15px;
-    font-size: 18px;
+    padding: 12px; /* Adjust padding for compactness */
+    font-size: 16px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-    background-color: #8a2be2; /* Lighter purple on hover */
+    background-color: #8a2be2; /* Lighter purple */
+    box-shadow: 0 0 8px rgba(138, 43, 226, 0.7); /* Glow on hover */
 }
 
 .error-message {
     color: #ff4c4c; /* Red color for error messages */
     font-size: 12px;
+    margin-top: -10px; /* Close to input */
     display: none;
 }
 
@@ -89,17 +97,26 @@ button:hover {
 }
 
 #success-message {
-    color: #32cd32; /* Green color for success message */
+    color: #32cd32; /* Green success message */
     text-align: center;
-    margin-top: 20px;
+    margin-top: 15px;
     font-weight: bold;
 }
 
 input, button {
-    font-family: 'Courier New', Courier, monospace; /* Match coder theme */
+    font-family: 'Courier New', Courier, monospace; /* Match theme */
 }
 
-/* Add a subtle glow effect on input fields and buttons for an interactive feel */
-input:focus, button:hover {
-    box-shadow: 0 0 5px rgba(138, 43, 226, 0.8); /* Purple glow */
+/* Responsive Fix: Ensure input fields adapt on smaller screens */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    input, button {
+        font-size: 14px;
+        padding: 10px;
+    }
 }
