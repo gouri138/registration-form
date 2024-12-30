@@ -1,0 +1,105 @@
+/* styles.css */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #1e1e1e; /* Dark background */
+    color: #f5f5f5; /* Light text color for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('pic2.webp'); /* Add your image URL here */
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Keep the background image fixed */
+}
+
+
+.form-container {
+    background-color: #2c2c2c; /* Dark grey background for form */
+    padding: 40px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    border: 1px solid #6a0dad; /* Purple border */
+}
+
+h2 {
+    text-align: center;
+    color: #c8a2c8; /* Light purple text */
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    color: #d1d1d1; /* Light grey text for labels */
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333; /* Dark input background */
+    border: 2px solid #6a0dad; /* Purple border */
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #8a2be2; /* Lighter purple when focused */
+    background-color: #2a2a2a; /* Slightly darker background on focus */
+}
+
+button {
+    background-color: #6a0dad; /* Purple background */
+    color: #fff;
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8a2be2; /* Lighter purple on hover */
+}
+
+.error-message {
+    color: #ff4c4c; /* Red color for error messages */
+    font-size: 12px;
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#success-message {
+    color: #32cd32; /* Green color for success message */
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+input, button {
+    font-family: 'Courier New', Courier, monospace; /* Match coder theme */
+}
+
+/* Add a subtle glow effect on input fields and buttons for an interactive feel */
+input:focus, button:hover {
+    box-shadow: 0 0 5px rgba(138, 43, 226, 0.8); /* Purple glow */
+}
